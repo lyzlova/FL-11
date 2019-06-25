@@ -1,0 +1,254 @@
+
+html {
+    box-sizing: border-box;
+  }
+
+  p, span, div, img {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: $contentBackground;
+    font-family: 'Source Sans Pro', sans-serif;
+    min-height: 100vh;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @function px-to-rem($val) {
+    $remSize: $val/$baseFontSize;
+    @return #{$remSize}rem;
+  }
+
+  header, main, footer {
+    margin: 0 auto;
+    min-width: px-to-rem(960px); 
+  }
+
+  @mixin flex($type: '') {
+    display: flex;
+
+    @if $type=='jcc' {
+      justify-content: center;
+    }
+
+    @else if $type=='aic' {
+      align-items: center;
+    }
+
+    @else if $type=='jcsb' {
+      justify-content: space-between;
+    }
+    @else if $type=='all' {
+      justify-content: space-between;
+      margin: auto;
+    }
+
+    @else if $type=='fw' {
+      flex-wrap: wrap;
+    }
+  }
+
+  %logo {
+    width: px-to-rem(56px);
+    height: px-to-rem(56px);
+  }
+
+  %logoPosition {
+    @include flex ('aic');
+    @include flex ('jcc');
+    flex-direction: column;
+  }
+
+  $font-weight: (
+    light: $fontWeightLightItalic,
+    regular: $fontWeightRegular,
+    bold: $fontWeightBold
+  );
+
+  %btn {
+    display: inline-block;
+    padding: px-to-rem(20px) px-to-rem(52px) px-to-rem(20px) px-to-rem(52px);
+    border-radius: px-to-rem(2px);
+    color: $colorBtn;
+    background-color: $colorBtnBunnerLeft;
+    border: 1px solid $colorBtnBunnerLeft;
+    height: px-to-rem(60px);
+    width: px-to-rem(176px);
+    font-weight: map-get($font-weight, regular);
+    font-size: px-to-rem(20px);
+    border-radius: px-to-rem(4px);
+    text-align: center;
+  }
+
+  @mixin underline($display, $pos, $conten, $index) {
+    display: $display;
+    position: $pos;
+    content: $conten;
+     z-index: $index;
+  }
+  
+  header {
+        @include flex('');
+
+    .header-wrap {
+        width: px-to-rem(780px);
+        padding-top: px-to-rem(25px);
+        padding-bottom: px-to-rem(216px);
+
+        .landing-logo {
+          @include flex('');
+            img{
+              @extend %logo;
+              margin-right: px-to-rem(20px);
+            }
+            p{
+              @extend %logoPosition;
+              font-weight: map-get($font-weight, bold); 
+              font-size: px-to-rem(30px);
+
+              span{
+                font-weight: map-get($font-weight, light); 
+                font-size: px-to-rem(14px);
+              }
+            }
+        }
+
+          .header_heading {
+            font-size: px-to-rem(90px);
+            padding-top: px-to-rem(106px); 
+            font-weight: map-get($font-weight, bold); 
+            &::after {
+              @include underline(block, absolute, '', -1);
+                width: px-to-rem(380px); 
+                height: px-to-rem(27px);         
+                bottom: px-to-rem(20px);
+            }
+        }
+        .header_text{
+          padding: px-to-rem(80px) 0;
+          width: px-to-rem(700px);
+        }
+        .header_button {
+          @extend %btn;
+        }
+    }
+}
+
+.section {
+  padding: px-to-rem(60px) px-to-rem(190px) px-to-rem(190px) px-to-rem(260px); 
+  .section_text {  
+      padding-bottom: px-to-rem(56px);  
+      font-weight: map-get($font-weight, regular); 
+      font-size: px-to-rem(52px);
+      transform: translate(50% 50%);
+      &::after {
+        @include underline(inline, absolute, '', -1);
+        width: px-to-rem(236px); 
+        height: px-to-rem(16px);  
+        bottom: px-to-rem(66px);
+    }
+  }
+
+  .section_card_wrap {
+      width: px-to-rem(1536px); 
+      @include flex ('all');
+
+      .section_card {
+          border-radius: px-to-rem(6px); 
+          padding: px-to-rem(25px) px-to-rem(25px)  px-to-rem(25px) px-to-rem(30px); 
+          .section_card_img{
+              height: px-to-rem(300px);
+              border-radius: px-to-rem(4px); 
+          }
+          .section_card_heading{
+            padding: px-to-rem(25px) 0 px-to-rem(25px) 0;
+            font-weight: map-get($font-weight, regular); 
+            font-size: px-to-rem(30px);
+            &::after{
+              @include underline(inline, absolute, '', -1);
+              height: px-to-rem(16px);    
+              bottom: px-to-rem(30px);
+            }
+          }
+          p{
+            font-weight: map-get($font-weight, regular); 
+            font-size: px-to-rem(20px);
+                        }
+      }
+    }
+
+  .section_banner {
+    border-radius: px-to-rem(10px);
+      height: px-to-rem(178px);  
+      width: px-to-rem(1200px); 
+      @include flex ('all');
+      padding: px-to-rem(40px) px-to-rem(126px) px-to-rem(50px) px-to-rem(128px); 
+      .section_banner_text_wrap{
+          .section_banner_heading{
+            padding-bottom: px-to-rem(25px);  
+            font-weight: map-get($font-weight, regular); 
+            font-size: px-to-rem(40px); 
+            &::after{
+              @include underline(block, absolute, '', -1);
+              left: px-to-rem(158px); 
+              width: px-to-rem(82px); 
+              height: px-to-rem(16px);    
+              bottom: px-to-rem(30px);
+            } 
+          }
+
+          .section_banner_text{
+            font-weight: map-get($font-weight, regular); 
+            font-size: px-to-rem(20px);
+          }
+          
+      }
+      .section_banner_button{
+        @extend %btn;
+      }
+  }
+}
+
+footer {
+  .footer-wrap {
+    width: px-to-rem(1540px);
+    padding-top: px-to-rem(25px);
+    @include flex ('all');
+    height: px-to-rem(300px);
+    @include flex ('aic');
+    padding: px-to-rem(170px) px-to-rem(190px) px-to-rem(74px);
+    div {
+      img {
+        @extend %logo;
+      }
+      p {
+        @extend %logoPosition;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+ 
+
+
+    
