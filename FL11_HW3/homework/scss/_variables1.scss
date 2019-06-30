@@ -16,6 +16,8 @@ $colorText: #2c2f3c;
 $contentBackground: #fff;
 $colorBtn: #fff;
 
+
+@media screen and (min-width: 960px) {
 header {
     background: url('../img/m-h-day.jpg') no-repeat center;
     min-width: $minWidth;
@@ -40,7 +42,11 @@ header {
             white-space: pre-line;
         }
 
-        .header_button {}
+        .header_button {
+            color: $colorBtn;
+            background-color: $colorBtnBunnerLeft;
+            border: 1px solid $colorBtnBunnerLeft;
+        }
     }
 }
 
@@ -121,8 +127,9 @@ header {
         }
 
         button {
+            color: $colorBtn;
             background-color: $colorBtnBunnerLeft;
-                border: 1px solid $colorBtnBunnerLeft;
+            border: 1px solid $colorBtnBunnerLeft;
         }
     }
 }
@@ -147,6 +154,7 @@ footer {
             text-align: end;
         }
     }
+}
 }
 
 

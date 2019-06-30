@@ -84,9 +84,6 @@ html {
     display: inline-block;
     padding: px-to-rem(20px) px-to-rem(52px) px-to-rem(20px) px-to-rem(52px);
     border-radius: px-to-rem(2px);
-    color: $colorBtn;
-    background-color: $colorBtnBunnerLeft;
-    border: 1px solid $colorBtnBunnerLeft;
     height: px-to-rem(60px);
     width: px-to-rem(176px);
     font-weight: map-get($font-weight, regular);
@@ -215,6 +212,7 @@ html {
           .section_banner_text{
             font-weight: map-get($font-weight, regular); 
             font-size: px-to-rem(20px);
+            text-align: start;
           }
           
       }

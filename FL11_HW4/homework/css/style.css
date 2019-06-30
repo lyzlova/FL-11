@@ -1,0 +1,288 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+}
+
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 56.25rem) {
+  .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    background: url('../img/sample2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000000;
+    color: #fff;
+  }
+
+  .header-nav,
+  .button__body,
+  .main-header,
+  .box-work,
+  .emplore__body,
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a,
+  button,
+  .main-header p:last-child,
+  .like,
+  .date {
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .footer-nav a,
+  input[type="text"]::placeholder,
+  input[type="text"] {
+    color: #000000;
+  }
+
+  .header__text,
+  .main-header p:last-child,
+  .article-descr,
+  .emplore__item,
+  .footer,
+  .box-form {
+    font-size: 0.75rem;
+  }
+
+  .header-nav p,
+  .header__heading {
+    text-transform: uppercase;
+  }
+
+  .header-nav{
+    min-width: 52rem;
+  }
+
+  .list-nav,
+  .article-descr {
+    display: flex;
+  }
+
+  .article__title,
+  .article-descr {
+    text-align: center;
+  }
+
+  .list-nav a:first-child {
+    padding-right: 3rem;
+  }
+
+  .header__wrap{
+    min-width: 52rem;
+    padding: 2rem 1.875rem 2rem;
+  }
+
+  .header__heading {
+    padding: 5rem 0 1.3rem;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .header__heading span {
+    font-size: 6rem;
+    font-weight: 400;
+  }
+
+  .button__body {
+    padding-top: 8rem;
+    min-width: 44rem;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 1rem 3.7rem;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin: 0;
+    font-size: 0.875rem;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .main__wrap {
+    width: 56.25rem;
+    padding-bottom: 3.125rem;
+  }
+
+  .main-header {
+    padding: 2.5rem 1.875rem 2.875rem;
+    background-image: linear-gradient(to top right, #f3f3f3 50%, #000 50%);
+  }
+
+  .main-header p {
+    flex-basis: 50%;
+  }
+
+  .main-header p:first-child {
+    margin-top: 5rem;
+    font-size: 1.2rem;
+  }
+
+  .main-header p:last-child {
+    flex-basis: 45%;
+  }
+
+  article {
+    width: 52rem;
+    padding: 0 1.875rem;
+  }
+
+  .article__title {
+    padding-bottom: 2rem;
+    font-weight: 400;
+  }
+
+  .article-info {
+    flex-basis: 50%;
+    position: relative;
+  }
+
+  .box-work:last-child {
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+  }
+
+  .article-info__img, .explore__img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .article-descr {
+    flex-basis: 42%;
+    flex-direction: column;
+  }
+
+  .article-descr p {
+    padding: 0.75rem 0;
+  }
+
+  .emplore {
+    padding: 1.6875rem 0;
+    background-color: #fff;
+  }
+
+  .emplore__body {
+    list-style: none;
+    margin-bottom: 2.375rem;
+    min-height: 14rem;
+    width: 47rem;
+  }
+
+  .emplore__item {
+    flex-basis: 20%;
+    position: relative;
+  }
+
+  .emplore__button {
+    background-color: #097774;
+    border: none;
+  }
+
+  .like,
+  .emplore-item__button,
+  .explore__img,
+  .date,
+  .article-info__img {
+    position: absolute;
+  }
+
+  .emplore-item__button {
+    padding: 0.3rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(9, 119, 116, 0.9);
+    border: none;
+  }
+
+  .like {
+    right: 0;
+    margin: 1.125rem 1rem 0 0;
+    padding: 0.25rem;
+    border: 2px solid #fff;
+  }
+
+  .date {
+    bottom: 0;
+    margin: 0 0 1.125rem 1rem;
+  }
+
+  .form-wrap {
+    padding: 2.25rem 0;
+  }
+
+  .box-form {
+    width: 53.75rem;
+  }
+
+  .box-form form {
+    text-align: right;
+    margin-top: 1.125rem;
+    font-size: 1.5rem;
+  }
+
+  .box-form form button {
+    padding: 0.625rem;
+    background-color: #097774;
+    border: none;
+  }
+
+  input[type="text"] {
+    background-color: #f3f3f3;
+    border: 1px solid #000000;
+    padding: 0.625rem;
+    margin: 0 0.5rem 0 1rem;
+  }
+
+  .footer-wrap {
+    background-color: #fff;
+    color: #9e9e9e;
+    padding: 1rem 0;
+    margin: 0 auto;
+  }
+
+  .footer {
+    min-width: 56.25rem;
+  }
+
+  .footer-nav a {
+    padding-right: 1rem;
+  }
+
+  .footer-nav a:last-child {
+    padding-right: 0;
+  }
+}

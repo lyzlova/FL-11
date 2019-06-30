@@ -18,7 +18,7 @@ $contentBackground: #21232e;
 $colorBtn: #fff;
 
 
-
+@media screen and (min-width: 960px) {
 header {
     background: url('../img/m-h-night.jpg') no-repeat center;
     min-width: $minWidth;
@@ -42,6 +42,11 @@ header {
             font-size: 14px;
             white-space: pre-line;
         }
+        .header_button {
+            color: $colorBtn;
+            background-color: $colorBtnBunnerLeft;
+            border: 1px solid $colorBtnBunnerLeft;
+        }
     }
 }
 
@@ -55,6 +60,7 @@ header {
         position: relative;
         display: inline-block;
         z-index: 1;
+        color: $colorBtn;
 
         &::after {
             right: 0;
@@ -73,7 +79,7 @@ header {
             }
 
             .section_card_heading {
-                color: $contentBackground;
+                color: $colorBtn;
                 line-height: 1.5;
                 position: relative;
                 display: inline-block;
@@ -122,8 +128,9 @@ header {
         }
 
         button {
+            color: $colorBtn;
             background-color: $colorBtnBunnerLeft;
-                border: 1px solid $colorBtnBunnerLeft;
+            border: 1px solid $colorBtnBunnerLeft;
         }
     }
 }
@@ -150,7 +157,7 @@ footer {
         }
     }
 }
-
+}
 
 
 
