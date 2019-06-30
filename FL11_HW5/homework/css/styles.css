@@ -1,0 +1,108 @@
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #555252;
+  font-family: roboto;
+  min-height: 100vh;
+  margin: 0 12px;
+  padding: 0;
+  background-color: var(--bg-color--dark);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: roboto;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+/* Your styles go here */
+
+
+
+/* ●	The @media query breakpoints that are used in the example (desktop first) should be:
+○	max-width: 1400px (for the desktop) 
+○	max-width: 768px (for the tablet)
+○	max-width: 480px (for the phone screen)
+ */
+
+
+ .nav-item, .travel-box {
+   list-style: none;
+ }
+
+ .travel-box {
+   padding: 0;
+   margin: 0;
+   color: var(--link);
+ }
+
+ .list-nav {
+   display: none;
+ }
+
+ .header {
+  color: var(--link);
+  background-color: var(--bg-color--header);
+ }
+
+ .logo-style__title {
+   color: #b71757;
+ }
+
+ .footer {
+  background-color: var(--bg-footer-color);
+ }
+
+ span {
+   display: block;
+ }
+
+ .travel-aside {
+   color: var(--bg-color--dark);
+   background-color: var(--link);
+ }
+
+.header, .footer, .date {
+  text-align: center;
+}
+
+ .h3 {
+   font-weight: 400;
+ }
+
+ 
