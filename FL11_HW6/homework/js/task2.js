@@ -11,5 +11,5 @@ if (b + c - a > 0 && a + c - b > 0 && a + b - c > 0) {
         console.log('Isosceles trianglet');
     }
 } else {
-    console.log('Triangle doesn’t exist')
+    console.log('Triangle doesn’t exist');
 }
