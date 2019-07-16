@@ -12,7 +12,7 @@ function findTypes(...args) {
   let obj = {
     number: 0,
     string: 0,
-    object: 0,
+    object: 0
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -77,7 +77,7 @@ console.log(filterArray([2, 5, 8], elMoreThree));
 
 function showFormattedDate(date) {
   let manth = date.toLocaleString('en-us', {
-    month: 'short',
+    month: 'short'
   });
   let day = date.getDate();
   let year = date.getFullYear();
@@ -120,7 +120,7 @@ function keys(obj) {
 let objKeys = {
   keyOne: 1,
   keyTwo: 2,
-  keyThree: 3,
+  keyThree: 3
 };
 console.log(keys(objKeys));
 
@@ -142,7 +142,7 @@ let code = [
     'birthday ': '2016-03-18T00:00:00',
     eyeColor: 'green',
     name: 'Stein',
-    favoriteFruit: 'apple',
+    favoriteFruit: 'apple'
   },
   {
     _id: '5b5e3168e328c0d72e4f27d8',
@@ -150,7 +150,7 @@ let code = [
     'birthday ': '1991-02-11T00:00:00',
     eyeColor: 'blue',
     name: 'Cortez',
-    favoriteFruit: 'strawberry',
+    favoriteFruit: 'strawberry'
   },
   {
     _id: '5b5e3168cc79132b631c666a',
@@ -158,7 +158,7 @@ let code = [
     'birthday ': '1984-04-17T00:00:00',
     eyeColor: 'blue',
     name: 'Suzette',
-    favoriteFruit: 'apple',
+    favoriteFruit: 'apple'
   },
   {
     _id: '5b5e31682093adcc6cd0dde5',
@@ -166,8 +166,8 @@ let code = [
     'birthday ': '1994-04-17T00:00:00',
     eyeColor: 'green',
     name: 'George',
-    favoriteFruit: 'banana',
-  },
+    favoriteFruit: 'banana'
+  }
 ];
 
 let data = [];
