@@ -1,15 +1,14 @@
-const a = prompt('Input first length triangle sides');
-const b = prompt('Input second length triangle sides');
-const c = prompt('Input third length triangle sides');
+let pocketNumber;
+let min = 0;
+let max = 8;
 
-if (b + c - a > 0 && a + c - b > 0 && a + b - c > 0) {
-    if (a === b && b === c && c === a) {
-        console.log('Eequivalent triangle');
-    } else if (a !== b && b !== c && c !== a) {
-        console.log('Normal triangle');
-    } else {
-        console.log('Isosceles trianglet');
-    }
+let gameWindow = confirm('Do you want to play a game?');
+if (gameWindow) {
+    // constMath.floor(Math.random() * max) + min;
+    pocketNumber = prompt('enter a number of pocket on which the ball could land');
 } else {
-    console.log('Triangle doesn’t exist');
+    alert('You did not become a billionaire, but can.');
 }
+
+const mathNumber = Math.floor(Math.random() * max) + min;
+console.log(mathNumber);
