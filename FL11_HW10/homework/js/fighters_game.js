@@ -1,5 +1,10 @@
 class Fighter {
-  constructor({ name, damage, hp, agility }) {
+  constructor({
+    name,
+    damage,
+    hp,
+    agility
+  }) {
     this._name = name;
     this._damage = damage;
     this._hp = hp;
